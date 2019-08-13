@@ -28,7 +28,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.jamesdavies.react-weather-minamal"
+      "package": "com.jamesdavies.react_weather_minamal"
     }
   }
 }

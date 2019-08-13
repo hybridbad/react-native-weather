@@ -28,13 +28,13 @@ export default class App extends React.Component {
 
   fetchWeather(lat = 25, lon = 25) {
     fetch(
-      `https://samples.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
     )
       .then(res => res.json())
       .then(json => {
         console.log(json)
         this.setState({
-          temperature: (json.main.temp - 273.15).toFixed(2),
+          temperature: json.main.temp,
           weatherCondition: json.weather[0].main,
           isLoading: false,
         })
